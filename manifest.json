@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Aide",
+  "version": "1.0",
+  "description": "Integrates AI with every website you visit",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["activeTab", "storage", "scripting", "contextMenus", "tabs"],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBGEYrlR0vXoKs0cXItkwmqJdx_mdIUid4",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup/sounds/*.mp3",
+        "popup/popup.css",
+        "icons/*.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }]
+}

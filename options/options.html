@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aide Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div class="settings-container">
+    <h1><img src="../icons/icon48.png" class="logo"> Aide Settings</h1>
+
+    <div id="api-key-section" class="setting-card">
+        <h2>API Configuration</h2>
+        <div id="no-key-message" class="setup-guide">
+            <h3>🔑 API Key Required</h3>
+            <p>To use Aide, you'll need a free Gemini API key:</p>
+            <ol class="setup-steps">
+                <li>Go to <a href="https://ai.google.dev/" target="_blank">Google AI Studio</a></li>
+                <li>Sign in with your Google account</li>
+                <li>Click "Get API Key" in the sidebar</li>
+                <li>Create a new API key</li>
+                <li>Paste it below</li>
+            </ol>
+            <button id="got-key" class="primary">I Have My Key</button>
+        </div>
+
+        <div id="key-input-container" class="form-group" style="display: none;">
+            <label for="api-key">Your Gemini API Key:</label>
+            <input type="password" id="api-key" placeholder="Paste your API key here">
+            <p class="hint">Keep this key secure - it's only stored on your device</p>
+        </div>
+    </div>
+
+    <div class="setting-card">
+        <h2>Appearance</h2>
+        <div class="form-group">
+            <label for="theme">Theme:</label>
+            <select id="theme">
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+                <option value="system">System Default</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="save-section" style="display: none;">
+        <button id="save" class="primary">Save Settings</button>
+        <div id="status" class="status"></div>
+    </div>
+</div>
+<script src="options.js"></script>
+</body>
+</html>

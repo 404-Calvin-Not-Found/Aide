@@ -10,7 +10,7 @@
   },
   "permissions": ["activeTab", "storage", "scripting", "contextMenus", "tabs"],
   "host_permissions": [
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBGEYrlR0vXoKs0cXItkwmqJdx_mdIUid4",
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<Place your own API key>",
     "<all_urls>"
   ],
   "background": {

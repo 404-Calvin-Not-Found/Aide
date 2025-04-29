@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 async function processWithGemini(text, context) {
     // Hardcoded API key (temporary)
-    const API_KEY = "AIzaSyBGEYrlR0vXoKs0cXItkwmqJdx_mdIUid4";
+    const API_KEY = "<Place your own API key>";
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
     const prompt = {
